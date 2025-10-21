@@ -1,0 +1,95 @@
+================================================================================
+INSTRUÇÕES PARA PUBLICAR NO GITHUB
+================================================================================
+
+PASSO 1: Criar Repositório no GitHub
+--------------------------------------------------------------------------------
+
+1. Acesse: https://github.com/new
+
+2. Preencha:
+   - Repository name: brf-factory-optimization
+   - Description: Industrial operations optimization for factory expansion using Linear Programming
+   - Visibility: Public
+   - NÃO marque "Initialize with README"
+
+3. Clique em "Create repository"
+
+
+PASSO 2: Conectar e Publicar (EXECUTE NO TERMINAL)
+--------------------------------------------------------------------------------
+
+Execute os comandos abaixo copiando e colando no terminal:
+
+cd /Users/denyssantos/Desktop/BRF_case
+
+# Adicione o repositório remoto (SUBSTITUA 'SEU_USUARIO' pelo seu username do GitHub)
+git remote add origin https://github.com/SEU_USUARIO/brf-factory-optimization.git
+
+# Verifique se foi adicionado corretamente
+git remote -v
+
+# Publique no GitHub (vai pedir suas credenciais)
+git push -u origin main
+
+
+PRONTO! Seu projeto estará publicado.
+
+
+PASSO 3: Configurar Descrição e Tags (OPCIONAL)
+--------------------------------------------------------------------------------
+
+Na página do repositório no GitHub:
+
+1. Clique no ícone de engrenagem em "About" (canto superior direito)
+
+2. Adicione:
+   Description: Industrial optimization case study - factory expansion analysis using Linear Programming to maximize ROI
+   
+   Topics (tags):
+   - optimization
+   - operations-research
+   - linear-programming
+   - data-science
+   - python
+   - jupyter-notebook
+   - industrial-engineering
+   - supply-chain
+   - portfolio-project
+
+
+PASSO 4: Atualizar Links Pessoais (OPCIONAL)
+--------------------------------------------------------------------------------
+
+Edite os arquivos abaixo e substitua os placeholders pelos seus dados reais:
+
+- README.md (linha ~242-244)
+- README_EN.md (linha ~245-247)
+
+Substitua:
+  seu-perfil → seu-perfil-linkedin-real
+  seu-usuario → seu-username-github-real
+  seu-email@example.com → seu-email-real@gmail.com
+
+Depois execute:
+  git add README.md README_EN.md
+  git commit -m "docs: Update personal contact links"
+  git push
+
+
+================================================================================
+O QUE JÁ FOI FEITO
+================================================================================
+
+✓ Repositório Git inicializado
+✓ Todos os arquivos adicionados
+✓ Commit inicial criado
+✓ Branch renomeada para 'main'
+✓ Emojis removidos para aparência mais profissional
+✓ Arquivos duplicados removidos
+✓ Estrutura organizada profissionalmente
+
+Tudo pronto para publicação!
+
+================================================================================
+

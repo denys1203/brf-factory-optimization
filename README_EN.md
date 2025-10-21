@@ -34,28 +34,28 @@ Deliverable capacity calculation considering:
 - Waste rate (out-of-spec products)
 - Weekdays vs. Saturdays
 
-$$
+```
 \text{Cap}_{\text{deliverable}} = \left[\left(\text{Cap}_{\text{mon-fri}} \times 22\right) + \left(\text{Cap}_{\text{sat}} \times 4\right)\right] \times \text{Efficiency} \times (1 - \text{Waste})
-$$
+```
 
 ### 2. **Unit Contribution**
 Unit economics analysis per factory and product:
 
-$$
+```
 \text{Contrib}_{p,f} = \text{Price}_p \times (1-\text{ICMS}_f) - \text{Freight}_p - \frac{\text{VC}_{p,f}}{1-\text{Waste}_f}
-$$
+```
 
 ### 3. **Allocation Optimization**
 Linear programming problem (greedy heuristic):
 
-$$
+```
 \max \sum_{p,f} \text{Contrib}_{p,f} \times x_{p,f}
-$$
+```
 
 Subject to:
-$$
+```
 \sum_f x_{p,f} = \text{Demand}_p \quad \forall p \qquad \sum_p x_{p,f} \leq \text{Cap}_f \quad \forall f
-$$
+```
 
 ### 4. **Scenario Analysis**
 Exhaustive enumeration of all combinations of:
@@ -66,14 +66,14 @@ Exhaustive enumeration of all combinations of:
 ### 5. **Financial Metrics**
 
 **Monthly Incremental Gain (Δ):**
-$$
+```
 \Delta = (\text{Profit}_{\text{scenario}} - \text{ExtraPayroll} + \text{SavedFixed}) - \text{Profit}_{\text{baseline}}
-$$
+```
 
 **Payback:**
-$$
+```
 \text{Payback (months)} = \frac{\text{CAPEX}}{\Delta}
-$$
+```
 
 ---
 

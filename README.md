@@ -32,28 +32,27 @@ Cálculo da capacidade entregável considerando:
 - Taxa de descarte (produtos fora do padrão)
 - Dias úteis vs. sábados
 
-$$
-\text{Cap}_{\text{entregável}} = \left[\left(\text{Cap}_{\text{seg-sex}} \times 22\right) + \left(\text{Cap}_{\text{sáb}} \times 4\right)\right] \times \text{Eficiência} \times (1 - \text{Descarte})
-$$
+```
+Cap_entregável = [(Cap_seg-sex × 22) + (Cap_sáb × 4)] × Eficiência × (1 - Descarte)
+```
 
 ### 2. **Contribuição Unitária**
 Análise de *unit economics* por fábrica e produto:
 
-$$
-\text{Contrib}_{p,f} = \text{Preço}_p \times (1-\text{ICMS}_f) - \text{Frete}_p - \frac{\text{CV}_{p,f}}{1-\text{Descarte}_f}
-$$
+```
+Contrib_p,f = Preço_p × (1-ICMS_f) - Frete_p - CV_p,f/(1-Descarte_f)
+```
 
 ### 3. **Otimização de Alocação**
 Problema de programação linear (heurística greedy):
 
-$$
-\max \sum_{p,f} \text{Contrib}_{p,f} \times x_{p,f}
-$$
+```
+max Σ(p,f) Contrib_p,f × x_p,f
 
 Sujeito a:
-$$
-\sum_f x_{p,f} = \text{Demanda}_p \quad \forall p \qquad \sum_p x_{p,f} \leq \text{Cap}_f \quad \forall f
-$$
+Σ(f) x_p,f = Demanda_p  ∀p
+Σ(p) x_p,f ≤ Cap_f      ∀f
+```
 
 ### 4. **Análise de Cenários**
 Enumeração exaustiva de todas as combinações de:
@@ -64,14 +63,14 @@ Enumeração exaustiva de todas as combinações de:
 ### 5. **Métricas Financeiras**
 
 **Ganho Incremental Mensal (Δ):**
-$$
-\Delta = (\text{Lucro}_{\text{cenário}} - \text{FolhaExtra} + \text{FixosFechados}) - \text{Lucro}_{\text{baseline}}
-$$
+```
+Δ = (Lucro_cenário - FolhaExtra + FixosFechados) - Lucro_baseline
+```
 
 **Payback:**
-$$
-\text{Payback (meses)} = \frac{\text{CAPEX}}{\Delta}
-$$
+```
+Payback (meses) = CAPEX / Δ
+```
 
 ---
 
