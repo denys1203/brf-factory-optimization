@@ -1,0 +1,264 @@
+═══════════════════════════════════════════════════════════════════════════════
+🚀 COMANDOS GIT - COPIE E COLE NO TERMINAL
+═══════════════════════════════════════════════════════════════════════════════
+
+PASSO 1: PREPARAR PROJETO
+═══════════════════════════════════════════════════════════════════════════════
+
+# Navegar para a pasta do projeto
+cd /Users/denyssantos/Desktop/BRF_case
+
+# (OPCIONAL) Remover arquivo duplicado
+rm otimizacao_BRF_Denys.ipynb
+
+# (OPCIONAL) Remover arquivo .docx (já descrito no README)
+# rm "Case Processo Seletivo - Especialista OTM.docx"
+
+
+PASSO 2: INICIALIZAR GIT
+═══════════════════════════════════════════════════════════════════════════════
+
+# Inicializar repositório Git
+git init
+
+# Configurar seu nome e email (se ainda não fez)
+git config user.name "Seu Nome"
+git config user.email "seu-email@example.com"
+
+# Adicionar todos os arquivos
+git add .
+
+# Ver status (verificar quais arquivos serão commitados)
+git status
+
+# Primeiro commit
+git commit -m "feat: Initial commit - BRF factory optimization analysis
+
+- Complete optimization analysis for factory expansion decision
+- Linear programming model for resource allocation
+- Scenario analysis (expand/close combinations)
+- Solution: Expand A+B, Close C (ROI 169% p.a., Payback 11.6 months)
+- Documentation in Portuguese and English
+- Jupyter notebook with detailed analysis"
+
+
+PASSO 3: CRIAR REPOSITÓRIO NO GITHUB
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Vá para: https://github.com/new
+
+2. Preencha:
+   - Repository name: brf-factory-optimization
+   - Description: Industrial Operations Optimization - Factory expansion analysis using Linear Programming
+   - Public
+   - NÃO marque "Initialize with README"
+
+3. Clique "Create repository"
+
+4. Copie a URL que aparece (ex: https://github.com/SEU_USUARIO/brf-factory-optimization.git)
+
+
+PASSO 4: CONECTAR AO GITHUB E PUBLICAR
+═══════════════════════════════════════════════════════════════════════════════
+
+# Adicionar remote (SUBSTITUA SEU_USUARIO pelo seu username)
+git remote add origin https://github.com/SEU_USUARIO/brf-factory-optimization.git
+
+# Verificar remote
+git remote -v
+
+# Renomear branch para main (se necessário)
+git branch -M main
+
+# Push inicial
+git push -u origin main
+
+
+PASSO 5: CONFIGURAR REPOSITÓRIO NO GITHUB
+═══════════════════════════════════════════════════════════════════════════════
+
+Na página do repositório (https://github.com/SEU_USUARIO/brf-factory-optimization):
+
+1. Clique em "Settings" (ícone ⚙️ no canto superior direito da página do repo)
+
+2. Em "About" (canto superior direito, acima dos arquivos):
+   - Clique no ícone ⚙️
+   - Description: 🏭 Industrial optimization: factory expansion analysis using LP to maximize ROI | Otimização industrial usando programação linear
+   - Topics (adicione):
+     * optimization
+     * operations-research
+     * linear-programming
+     * data-science
+     * python
+     * jupyter-notebook
+     * industrial-engineering
+     * supply-chain
+     * portfolio-project
+   - Salve
+
+
+COMANDOS GIT ÚTEIS (uso diário)
+═══════════════════════════════════════════════════════════════════════════════
+
+# Ver mudanças
+git status
+
+# Adicionar arquivo específico
+git add README.md
+
+# Adicionar todos os arquivos modificados
+git add .
+
+# Commit
+git commit -m "docs: Update documentation"
+
+# Push (enviar para GitHub)
+git push
+
+# Ver histórico
+git log --oneline --graph
+
+# Desfazer mudanças não commitadas
+git checkout -- arquivo.txt
+
+# Ver diferenças
+git diff
+
+
+COMMITS SEMÂNTICOS (boas práticas)
+═══════════════════════════════════════════════════════════════════════════════
+
+feat:     Nova funcionalidade
+fix:      Correção de bug
+docs:     Documentação
+refactor: Refatoração de código
+test:     Testes
+style:    Formatação (sem mudança de lógica)
+chore:    Manutenção (dependências, configs)
+
+Exemplos:
+  git commit -m "feat: Add VPL/TIR analysis"
+  git commit -m "docs: Update README with new results"
+  git commit -m "fix: Correct capacity calculation"
+
+
+ATUALIZAR LINKS PESSOAIS
+═══════════════════════════════════════════════════════════════════════════════
+
+# Editar arquivos e substituir placeholders:
+#   - README.md (linha ~245)
+#   - README_EN.md (linha ~195)
+#   - docs/QUICK_START.md (linha ~135)
+
+# Exemplo de substituições:
+#   SEU_USUARIO → denyssantos (ou seu username real)
+#   seu-perfil → seu-perfil-linkedin
+#   seu-email@example.com → seu.email@gmail.com
+
+# Depois:
+git add README.md README_EN.md docs/QUICK_START.md
+git commit -m "docs: Update personal links"
+git push
+
+
+ADICIONAR IMAGENS (opcional)
+═══════════════════════════════════════════════════════════════════════════════
+
+# Criar pasta para imagens
+mkdir images
+
+# Adicionar screenshots das tabelas/gráficos em images/
+
+# No README.md, adicionar:
+# ![Análise de Cenários](images/cenarios_comparison.png)
+
+git add images/
+git add README.md
+git commit -m "docs: Add visualization screenshots"
+git push
+
+
+CRIAR RELEASE (quando finalizar)
+═══════════════════════════════════════════════════════════════════════════════
+
+# No GitHub, vá para: Releases → Create a new release
+
+Tag version: v1.0.0
+Release title: BRF Factory Optimization - Initial Release
+Description:
+  Complete optimization analysis for factory expansion decision.
+  
+  Key Results:
+  - Optimal solution: Expand A+B, Close C
+  - ROI: 169% p.a.
+  - Payback: 11.6 months
+  - Monthly gain: R$ 688,470
+
+Publish release
+
+
+VERIFICAR TUDO ESTÁ OK
+═══════════════════════════════════════════════════════════════════════════════
+
+# Acesse a URL do seu repositório
+# Verifique:
+  ✅ README.md está sendo exibido corretamente
+  ✅ Badges estão funcionando
+  ✅ Equações LaTeX estão renderizadas
+  ✅ Links não estão quebrados
+  ✅ Descrição e tags aparecem no topo
+  ✅ Notebook está visualizável (GitHub renderiza .ipynb)
+
+
+COMPARTILHAR
+═══════════════════════════════════════════════════════════════════════════════
+
+LinkedIn (post sugerido):
+
+  🏭 Novo projeto: Otimização de Operações Industriais
+  
+  Desenvolvi uma análise completa de expansão de capacidade fabril usando 
+  programação linear e otimização combinatória.
+  
+  📊 Desafio: 
+  Decidir quais fábricas expandir (+60%) e quais encerrar para atender 
+  crescimento de demanda de 61% em 5 anos.
+  
+  🎯 Resultado: 
+  Identificada estratégia ótima com:
+  • ROI de 169% a.a.
+  • Payback de 11,6 meses
+  • Ganho incremental de R$ 688k/mês
+  
+  🔧 Técnicas: 
+  Programação Linear | Análise de Investimentos | Unit Economics
+  
+  👉 Confira o projeto completo (código + matemática) no GitHub:
+  https://github.com/SEU_USUARIO/brf-factory-optimization
+  
+  #DataScience #Otimização #Python #OperationsResearch #Analytics
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════════
+
+Erro: "remote origin already exists"
+Solução:
+  git remote remove origin
+  git remote add origin https://github.com/SEU_USUARIO/repo.git
+
+Erro: "failed to push some refs"
+Solução:
+  git pull origin main --rebase
+  git push origin main
+
+Erro: Arquivo muito grande
+Solução:
+  # Adicione ao .gitignore
+  echo "arquivo_grande.csv" >> .gitignore
+  git rm --cached arquivo_grande.csv
+  git commit -m "chore: Remove large file"
+
+═══════════════════════════════════════════════════════════════════════════════
+
